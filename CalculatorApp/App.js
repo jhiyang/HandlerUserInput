@@ -5,13 +5,13 @@ const App = () => {
   const [firstNumber, setFirstNumber] = useState('');
   const [secondNumber, setSecondNumber] = useState('');
   const [result, setResult] = useState(null);
-  const [selectedOperation, setSelectedOperation] = useState(null); // New state to track selected operation
+  const [selectedOperation, setSelectedOperation] = useState(null);
 
   const handleOperation = (operation) => {
     const num1 = parseFloat(firstNumber);
     const num2 = parseFloat(secondNumber);
     if (!isNaN(num1) && !isNaN(num2)) {
-      setSelectedOperation(operation); // Set the selected operation
+      setSelectedOperation(operation);
       switch (operation) {
         case 'Add':
           setResult(num1 + num2);
@@ -37,7 +37,7 @@ const App = () => {
     setFirstNumber('');
     setSecondNumber('');
     setResult(null);
-    setSelectedOperation(null); // Reset the selected operation
+    setSelectedOperation(null);
   };
 
   return (
@@ -47,7 +47,7 @@ const App = () => {
         <Text style={styles.headerText}>Calculator App</Text>
       </View>
 
-      {/* Separator Line under header */}
+      {}
       <View style={styles.headerLine} />
 
       <View style={styles.inputRow}>
@@ -89,13 +89,13 @@ const App = () => {
         ))}
       </View>
 
-      {/* Result Row with Line */}
+      {}
       <View style={styles.resultRow}>
         <Text style={styles.resultLabel}>Result:</Text>
         <Text style={styles.result}>{result !== null ? result : ''}</Text>
       </View>
 
-      {/* Line under the result */}
+      {}
       <View style={styles.resultLine} />
 
       <Pressable style={styles.resetButton} onPress={resetCalculator}>
@@ -127,7 +127,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
     flex: 1,
-    marginRight: 40, // Ensure "Back" text does not overlap the title
+    marginRight: 40,
     paddingTop: 30,
   },
   headerLine: {
@@ -141,21 +141,21 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     marginBottom: 15,
     borderBottomWidth: 1,
-    borderBottomColor: '#C7C7CD', // Line under label and input
+    borderBottomColor: '#C7C7CD',
     paddingBottom: 10,
   },
   label: {
     fontSize: 16,
     fontWeight: '500',
     color: '#000',
-    width: '40%', // Adjust width so the label and input are aligned
+    width: '40%', 
   },
   input: {
     fontSize: 18,
     paddingVertical: 10,
     color: '#000',
-    width: '55%', // Adjust width to balance the layout
-    textAlign: 'left', // Align input text and placeholder to the left
+    width: '55%', 
+    textAlign: 'left', 
     marginLeft: 50,
   },
   buttonContainer: {
@@ -170,7 +170,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   buttonSelected: {
-    backgroundColor: 'rgba(0, 122, 255, 0.5)', // Transparent effect for selected buttons
+    backgroundColor: 'rgba(0, 122, 255, 0.5)',
   },
   buttonText: {
     textAlign: 'center',
@@ -183,7 +183,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     marginTop: 20,
     borderBottomWidth: 1,
-    borderBottomColor: '#C7C7CD', // Line under result
+    borderBottomColor: '#C7C7CD',
     paddingBottom: 10,
   },
   resultLabel: {
@@ -195,7 +195,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: '500',
     color: '#000',
-    marginLeft: 10, // Adjust left margin for space between label and result
+    marginLeft: 10, 
   },
   resultLine: {
     height: 0.5,
